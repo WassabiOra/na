@@ -1,0 +1,13 @@
+void Update()
+    {
+        //WhentoChange would choose the direction, True would go right and False would go left
+        if (whentoChange == true)
+        {
+            transform.Translate(enemyhSpeed * Time.deltaTime, 0, 0); // RIGHT
+        }
+
+        if (whentoChange == false)
+        {
+            transform.Translate(-1* enemyhSpeed * Time.deltaTime, 0, 0); // LEFT
+        }
+    }
