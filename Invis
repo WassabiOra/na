@@ -1,0 +1,20 @@
+void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("COLLIDED");
+
+
+
+        //When it his the "Invis1 or Invis2 tagged objects, the object would change directions
+        if (other.gameObject.tag=="invis1"&&whentoChange==true)
+        {
+            whentoChange=false; //"TIME TO GO LEFT NOW"
+            Debug.Log("changedh1");
+        }
+
+        if (other.gameObject.tag == "invis2" && whentoChange == false)
+        {
+            whentoChange = true; //"TIME TO GO RIGHT NOW"
+            Debug.Log("changedh2");
+        }
+    }
+}
